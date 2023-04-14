@@ -1,6 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+
 const cors = require('cors');
 const { errors } = require('celebrate');
 const router = require('./routes');
@@ -11,6 +15,8 @@ const corsOption = require('./middlewares/cors');
 const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
 
 const app = express();
+
+app.use(bodyParser.json());
 
 app.use(requestLogger);
 
