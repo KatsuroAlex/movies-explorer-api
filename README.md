@@ -1,5 +1,5 @@
 # movies-explorer-api
 
-IP 158.160.5.86
+IP 158.160.9.45
 
-Frontend <https://katsuromesto.nomoredomains.monster>
+Backend <https://api.katsuromovies-diplom.nomoredomains.monster>

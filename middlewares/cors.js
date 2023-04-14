@@ -3,6 +3,8 @@ const CORS_WHITELIST = [
   'https://localhost:3000',
   'http://localhost:3001',
   'https://localhost:3001',
+  'http://katsuromovies-diplom.nomoredomains.monster',
+  'https://katsuromovies-diplom.nomoredomains.monster',
 ];
 
 const corsOption = {
