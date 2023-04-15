@@ -30,6 +30,9 @@ const updateUser = async (req, res, next) => {
     if (err.name === 'ValidationError') {
       next(new ValidationError(`${Object.values(err.errors).map((error) => error.message).join(', ')}`));
     }
+    if (err.name === 'MongoError' && err.code === 11000) {
+      next(new UserExistError('Пользователь с таким email уже существует'));
+    }
     return next(err);
   }
 };

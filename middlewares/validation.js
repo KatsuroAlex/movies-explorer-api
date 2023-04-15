@@ -55,8 +55,25 @@ const validateCreateMovie = celebrate({
   }),
 });
 
+const validateSignup = celebrate({
+  body: Joi.object().keys({
+    name: Joi.string().required().min(2).max(30),
+    email: checkedEmail,
+    password: Joi.string().required().min(4),
+  }),
+});
+
+const validateSignin = celebrate({
+  body: Joi.object().keys({
+    email: checkedEmail,
+    password: Joi.string().required().min(4),
+  }),
+});
+
 module.exports = {
   validateUserProfile,
   validateMovie,
   validateCreateMovie,
+  validateSignup,
+  validateSignin,
 };

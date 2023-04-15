@@ -8,20 +8,30 @@ Content-Type: application/json
   "password": "madmax"
 }
 
+### Регистрация Domen
+POST http://https://katsuromovies-diplom.nomoredomains.monster/signup
+Content-Type: application/json
+
+{
+  "name": "Madmax",
+  "email": "madmax@madmax.ru",
+  "password": "madmax"
+}
+
 
 ### Вход в аккаунт
 POST http://localhost:3000/signin
 Content-Type: application/json
 
-# {
-#   "email": "mango@mango.ru",
-#   "password": "mango"
-# }
-
 {
-  "email": "madmax@madmax.ru",
-  "password": "madmax"
+  "email": "mango@mango.ru",
+  "password": "mango"
 }
+
+# {
+#   "email": "madmax@madmax.ru",
+#   "password": "madmax"
+# }
 
 
 
@@ -51,8 +61,8 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "country": "admin",
-  "director": "admin",
+  "country": "madmax",
+  "director": "madmax",
   "duration": "10",
   "year": "admin",
   "description": "admin",
