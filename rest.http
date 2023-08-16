@@ -1,5 +1,5 @@
 ### Регистрация
-POST http://localhost:3000/signup
+POST http://localhost:3001/signup
 Content-Type: application/json
 
 {
@@ -8,24 +8,25 @@ Content-Type: application/json
   "password": "madmax"
 }
 
+
 ### Регистрация Domen
-POST http://https://katsuromovies-diplom.nomoredomains.monster/signup
+POST https://katsuromovies-diplom.nomoredomains.monster/signup
 Content-Type: application/json
 
 {
-  "name": "Madmax",
-  "email": "madmax@madmax.ru",
-  "password": "madmax"
+  "name": "Denis",
+  "email": "denis@denis.ru",
+  "password": "denis"
 }
 
 
 ### Вход в аккаунт
-POST http://localhost:3000/signin
+POST http://localhost:3001/signin
 Content-Type: application/json
 
 {
-  "email": "mango@mango.ru",
-  "password": "mango"
+  "email": "diman@diman.ru",
+  "password": "diman"
 }
 
 # {
@@ -36,19 +37,19 @@ Content-Type: application/json
 
 
 ### Выход из аккаунта
-POST http://localhost:3000/signout
+POST http://localhost:3001/signout
 
 
 ### Найти пользователя
-GET http://localhost:3000/users/me
+GET http://localhost:3001/users/me
 
 ### Обновить данные пользователя
-PATCH http://localhost:3000/users/me
+PATCH http://localhost:3001/users/me
 Content-Type: application/json
 
 {
-  "name": "Diman",
-  "email": "mango@mango.ru"
+  "name": "diman",
+  "email": "madmax@madmax.ru"
 }
 
 

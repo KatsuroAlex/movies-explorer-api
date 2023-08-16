@@ -27,10 +27,11 @@ const updateUser = async (req, res, next) => {
     const result = await User.findByIdAndUpdate(req.user._id, updates, options).orFail(new NotFoundError('Пользователь по указанному _id не найден'));
     return res.status(SUCCESS).json(result);
   } catch (err) {
+    console.log(err);
     if (err.name === 'ValidationError') {
       next(new ValidationError(`${Object.values(err.errors).map((error) => error.message).join(', ')}`));
     }
-    if (err.name === 'MongoError' && err.code === 11000) {
+    if (err.name === 'MongoError' || err.code === 11000) {
       next(new UserExistError('Пользователь с таким email уже существует'));
     }
     return next(err);
