@@ -1,0 +1,106 @@
+### Регистрация
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+  "name": "Madmax",
+  "email": "madmax@madmax.ru",
+  "password": "madmax"
+}
+
+### Регистрация Domen
+POST http://https://katsuromovies-diplom.nomoredomains.monster/signup
+Content-Type: application/json
+
+{
+  "name": "Madmax",
+  "email": "madmax@madmax.ru",
+  "password": "madmax"
+}
+
+
+### Вход в аккаунт
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "mango@mango.ru",
+  "password": "mango"
+}
+
+# {
+#   "email": "madmax@madmax.ru",
+#   "password": "madmax"
+# }
+
+
+
+### Выход из аккаунта
+POST http://localhost:3000/signout
+
+
+### Найти пользователя
+GET http://localhost:3000/users/me
+
+### Обновить данные пользователя
+PATCH http://localhost:3000/users/me
+Content-Type: application/json
+
+{
+  "name": "Diman",
+  "email": "mango@mango.ru"
+}
+
+
+### получить все фильмы
+GET http://localhost:3000/movies
+
+
+### Создает фильм
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "country": "madmax",
+  "director": "madmax",
+  "duration": "10",
+  "year": "admin",
+  "description": "admin",
+  "image": "https://plus.unsplash.com/premium_photo-1673002094326-25bc625ebfa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+  "trailer": "https://plus.unsplash.com/premium_photo-1673002094326-25bc625ebfa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+  "thumbnail": "https://plus.unsplash.com/premium_photo-1673002094326-25bc625ebfa7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=60",
+  "movieId": "55555555555",
+  "nameRU": "admin123",
+  "nameEN": "admin123"
+}
+
+### удаляет фильм по id
+DELETE http://localhost:3000/movies/64394373f9bbefef244935a6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Получить всех пользователей
+GET http://localhost:3000/users
+
+### возвращает пользователя по ID
+GET http://localhost:3000/users/642aebfcc0c49dabe4152d67
+
+### поставить лайк на карточку
+PUT http://localhost:3000/cards/639764b55bea54cede220346/likes
+
+### убрать лайк с карточки
+DELETE http://localhost:3000/cards/639764b55bea54cede220346/likes
